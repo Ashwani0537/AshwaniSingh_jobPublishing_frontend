@@ -1,0 +1,46 @@
+  
+  <mat-label class="role1">select Role</mat-label>
+<mat-form-field appearance="outline">
+  <mat-select (selectionChange)="SelectonClick($event)">
+     
+    <mat-option *ngFor="let role of roles" value="{{roles.selectRole}}">
+      {{role.selectRole}}
+    </mat-option>
+  </mat-select>
+   
+</mat-form-field> 
+
+ 
+    <mat-label class="dep1">Departments</mat-label>
+    <mat-form-field appearance="outline">
+      <mat-select class="dep2">
+        <mat-option *ngFor="let dep of deps" value="{{dep.id}}">
+          {{dep.departmentName}}
+        </mat-option>
+      </mat-select>
+     
+      
+      
+    </mat-form-field><br>
+ 
+    <mat-radio-group aria-label="Select an option">
+      <mat-label class="job1">Job Type</mat-label>
+       <div class="div1">
+      <mat-radio-button *ngFor="let job of jobs" >{{job.jobType}}</mat-radio-button>
+    </div>
+     
+    </mat-radio-group>
+  
+     
+  
+    <mat-radio-group aria-label="Select an option">
+      <mat-label class="job1">Working Mode</mat-label>
+       <div class="div1">
+      <mat-radio-button *ngFor="let work of works">{{work.workingMode}}</mat-radio-button>
+    </div>
+     
+    </mat-radio-group>
+  
+
+
+
